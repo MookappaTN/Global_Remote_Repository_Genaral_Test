@@ -83,6 +83,12 @@ public class UtilsTestNg {
 			
 	}
 	
+	@Test(priority = 4,invocationCount = 1)
+	public void uploadFile() throws InterruptedException {
+		Thread.sleep(300);
+		driver.findElement(By.id("imagesrc")).sendKeys("C:\\Users\\MookappaT\\Downloads\\sampleFile (8).jpeg");
+	}
+	
 	@AfterTest
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(300);

@@ -21,6 +21,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import junit.framework.Assert;
+
 public class UtilsTestNg {
 	public WebDriver driver ;
 	
@@ -87,6 +89,7 @@ public class UtilsTestNg {
 	public void uploadFile() throws InterruptedException {
 		Thread.sleep(300);
 		driver.findElement(By.id("imagesrc")).sendKeys("C:\\Users\\MookappaT\\Downloads\\sampleFile (8).jpeg");
+		Assert.assertEquals(driver.findElement(By.id("imagesrc")).getText(), "C:\\Users\\MookappaT\\Downloads\\sampleFile (8).jpeg");
 	}
 	
 	@AfterTest
